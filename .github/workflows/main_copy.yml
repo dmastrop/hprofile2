@@ -1,4 +1,4 @@
-name: Hprofile Actions
+name: Hprofile Actions Code test
 on: workflow_dispatch
 # this means it will only run when Run in github actions. Later we will use push as a trigger
 jobs:
