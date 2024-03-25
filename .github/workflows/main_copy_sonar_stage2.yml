@@ -1,4 +1,4 @@
-name: Hprofile Actions Code test
+name: Hprofile Actions Code test with SonarQube part2
 on: workflow_dispatch
 # this means it will only run when Run in github actions. Later we will use push as a trigger
 jobs:
@@ -58,6 +58,8 @@ jobs:
         # this setups up the sonar-scanner cli tool in the runner
 
       # Run sonar-scanner from CLI on the runner
+      # All these github secrets have been entered into github under this repo
+      # /src is in our source code and where the java source code resides
       - name: SonarQube Scan
         run: sonar-scanner
             -Dsonar.host.url=${{ secrets.SONAR_URL }}
