@@ -1,0 +1,11 @@
+name: Hprofile Actions
+on: workflow_dispatch
+# this means it will only run when Run in github actions. Later we will use push as a trigger
+jobs:
+  Testing:
+  # this is the job name
+    #specify the runner to run the job. Ubuntu has a lot of stuff prebuilt. It will run a container
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing workflow
+        run: echo "Workflow works!!!!"
