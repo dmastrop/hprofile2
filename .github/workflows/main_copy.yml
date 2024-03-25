@@ -1,0 +1,20 @@
+name: Hprofile Actions
+on: workflow_dispatch
+# this means it will only run when Run in github actions. Later we will use push as a trigger
+jobs:
+  Testing:
+  # this is the job name
+    #specify the runner to run the job. Ubuntu has a lot of stuff prebuilt. It will run a container
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code checkout
+      # by default github actions does not automatically clone the source code to the runner. This has to be explicitly done.
+        uses: actions/checkout@v4
+        # this is found at github.com/marketplace under Actions and then Checkout
+        # This will clone whatever is the source code where this is being executed to the github runner
+
+      - name: Maven test
+        run: mvn test
+      
+      - name: Checkstyle analysis
+        run: mvn checkstyle:checkstyle
