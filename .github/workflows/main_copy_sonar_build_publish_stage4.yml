@@ -13,6 +13,7 @@ jobs:
     #specify the runner to run the job. Ubuntu has a lot of stuff prebuilt. It will run a container
     runs-on: ubuntu-latest
     # ubuntu-latest runner by default does not have sonar scanner so this has to be installed.
+
     steps:
       - name: Code checkout
       # by default github actions does not automatically clone the source code to the runner. This has to be explicitly done.
@@ -93,8 +94,11 @@ jobs:
 
   JOB_2_BUILD_AND_PUBLISH:
   # this is the job name
+    # "needs" makes sure that this job only runs after the first job above runs and is successful
+    needs: JOB_1_TESTING_SONARQUBE
     #specify the runner to run the job. Ubuntu has a lot of stuff prebuilt. It will run a container
     runs-on: ubuntu-latest
+    
     steps:
       - name: Code checkout
       # by default github actions does not automatically clone the source code to the runner. This has to be explicitly done.
