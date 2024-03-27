@@ -1,6 +1,7 @@
 # Prerequisites
 # test commit to the forked dmastrop/hprofile repository
 #####
+# test commit with workflow on push
 - JDK 11
 - Maven 3
 - MySQL 8 
