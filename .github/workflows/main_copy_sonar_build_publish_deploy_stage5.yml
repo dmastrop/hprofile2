@@ -1,6 +1,8 @@
 name: Stage 5 Hprofile Actions Code Build Docker image and Publish to ECR and Deploy to ECS Stage5
-on: workflow_dispatch
+#on: workflow_dispatch
 # this means it will only run when Run in github actions. Later we will use push as a trigger
+on: [push, workflow_dispatch]
+# this will start the workflow either with a git push to the remote repo or run manually in github actions
 
 env:
   AWS_REGION: us-east-1
@@ -198,6 +200,3 @@ jobs:
           cluster: ${{ env.ECS_CLUSTER }}
           # wait until ECS service stable (ALB, container), then only marked as stable, and job will be complete
           wait-for-service-stability: true
-
-
-        
