@@ -11,7 +11,7 @@ env:
   # the following block of env vars are used by the JOB_3 below to deploy the new task def (new build of the code) and 
   # thus deploy to ECS. The ECS service will detect the change
   ECR_REPOSITORY: github-actions-ecr-project12
-  ECS_SERVICE: github-actions-ecs-service-vprofile-project12
+  ECS_SERVICE: github-actions-ecs-service-vprofile-project12-1
   ECS_CLUSTER: github-actions-ecs-vprofile-project12
   ECS_TASK_DEFINITION: aws-files/taskdeffile.json
   CONTAINER_NAME: vprofile-project12
@@ -189,8 +189,9 @@ jobs:
 
       # Use env variables to target the correct ECR repo, ECS service, Cluster, task definition and container name
       # All of these will refer to the names used in the AWS ECS cluster configuration
+      # see env at the top of this file
       # ECR_REPOSITORY: github-actions-ecr-project12
-      # ECS_SERVICE: github-actions-ecs-service-vprofile-project12
+      # ECS_SERVICE: github-actions-ecs-service-vprofile-project12-1
       # ECS_CLUSTER: github-actions-ecs-vprofile-project12
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
