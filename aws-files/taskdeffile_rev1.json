@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:725291656587:task-definition/github-actions-ecs-task-def-vprofile-project12:6",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:725291656587:task-definition/github-actions-ecs-task-def-vprofile-project12:1",
     "containerDefinitions": [
         {
             "name": "vprofile-project12",
@@ -23,10 +23,8 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/github-actions-ecs-task-def-vprofile-project12",
-                    "mode": "non-blocking",
                     "awslogs-create-group": "true",
-                    "max-buffer-size": "25m",
+                    "awslogs-group": "/ecs/github-actions-ecs-task-def-vprofile-project12",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -38,7 +36,7 @@
     "family": "github-actions-ecs-task-def-vprofile-project12",
     "executionRoleArn": "arn:aws:iam::725291656587:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 6,
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -53,9 +51,6 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -79,14 +74,13 @@
         "FARGATE"
     ],
     "cpu": "1024",
-    "memory": "3072",
+    "memory": "2048",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-01-17T00:47:53.096Z",
-    "registeredBy": "arn:aws:iam::725291656587:root",
-    "enableFaultInjection": false,
+    "registeredAt": "2024-03-26T01:19:05.151Z",
+    "registeredBy": "arn:aws:iam::725291656587:user/dave",
     "tags": [
         {
             "key": "Project",
@@ -94,7 +88,7 @@
         },
         {
             "key": "Name",
-            "value": "github-actions-ecs-task-def-vprofile-project12"
+            "value": "ecs-task-def-vprofile-project12"
         }
     ]
 }
