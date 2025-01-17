@@ -86,7 +86,6 @@
     },
     "registeredAt": "2025-01-17T00:47:53.096Z",
     "registeredBy": "arn:aws:iam::725291656587:root",
-    "enableFaultInjection": false,
     "tags": [
         {
             "key": "Project",
