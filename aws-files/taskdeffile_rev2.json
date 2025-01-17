@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:725291656587:task-definition/github-actions-ecs-task-def-vprofile-project12:10",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:725291656587:task-definition/github-actions-ecs-task-def-vprofile-project12:6",
     "containerDefinitions": [
         {
             "name": "vprofile-project12",
-            "image": "725291656587.dkr.ecr.us-east-1.amazonaws.com/github-actions-ecr-project12:17",
+            "image": "725291656587.dkr.ecr.us-east-1.amazonaws.com/github-actions-ecr-project12",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,8 +16,10 @@
             ],
             "essential": true,
             "environment": [],
+            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
+            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -27,7 +29,8 @@
                     "max-buffer-size": "25m",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
-                }
+                },
+                "secretOptions": []
             },
             "systemControls": []
         }
@@ -35,7 +38,7 @@
     "family": "github-actions-ecs-task-def-vprofile-project12",
     "executionRoleArn": "arn:aws:iam::725291656587:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 10,
+    "revision": 6,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -81,8 +84,8 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-01-17T03:57:39.684Z",
-    "registeredBy": "arn:aws:iam::725291656587:user/github-actions-hprofile-project12",
+    "registeredAt": "2025-01-17T00:47:53.096Z",
+    "registeredBy": "arn:aws:iam::725291656587:root",
     "tags": [
         {
             "key": "Project",
